@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B479392B17C90D5D0035FD8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B479392A17C90D5D0035FD8B /* UIKit.framework */; };
+		B479392D17C90D5D0035FD8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B479392C17C90D5D0035FD8B /* Foundation.framework */; };
+		B479392F17C90D5D0035FD8B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B479392E17C90D5D0035FD8B /* CoreGraphics.framework */; };
+		B479393217C90D5D0035FD8B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B479393117C90D5D0035FD8B /* Podfile */; };
+		B479393817C90D5D0035FD8B /* LyticsAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B479393717C90D5D0035FD8B /* LyticsAPIClient.m */; };
+		B479393C17C90D5D0035FD8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B479393A17C90D5D0035FD8B /* InfoPlist.strings */; };
+		B479393E17C90D5D0035FD8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B479393D17C90D5D0035FD8B /* main.m */; };
+		B479394117C90D5D0035FD8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B479394017C90D5D0035FD8B /* AppDelegate.m */; };
+		B479394317C90D5D0035FD8B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B479394217C90D5D0035FD8B /* Default.png */; };
+		B479394517C90D5D0035FD8B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B479394417C90D5D0035FD8B /* Default@2x.png */; };
+		B479394717C90D5D0035FD8B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B479394617C90D5D0035FD8B /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B479392717C90D5D0035FD8B /* Lytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B479392A17C90D5D0035FD8B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B479392C17C90D5D0035FD8B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B479392E17C90D5D0035FD8B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B479393117C90D5D0035FD8B /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
+		B479393417C90D5D0035FD8B /* Lytics-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lytics-Prefix.pch"; sourceTree = "<group>"; };
+		B479393617C90D5D0035FD8B /* LyticsAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LyticsAPIClient.h; path = Classes/LyticsAPIClient.h; sourceTree = "<group>"; };
+		B479393717C90D5D0035FD8B /* LyticsAPIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LyticsAPIClient.m; path = Classes/LyticsAPIClient.m; sourceTree = "<group>"; };
+		B479393917C90D5D0035FD8B /* Lytics-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lytics-Info.plist"; sourceTree = "<group>"; };
+		B479393B17C90D5D0035FD8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B479393D17C90D5D0035FD8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B479393F17C90D5D0035FD8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B479394017C90D5D0035FD8B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B479394217C90D5D0035FD8B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B479394417C90D5D0035FD8B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		B479394617C90D5D0035FD8B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B479392417C90D5D0035FD8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B479392B17C90D5D0035FD8B /* UIKit.framework in Frameworks */,
+				B479392D17C90D5D0035FD8B /* Foundation.framework in Frameworks */,
+				B479392F17C90D5D0035FD8B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B479391E17C90D5D0035FD8B = {
+			isa = PBXGroup;
+			children = (
+				B479393017C90D5D0035FD8B /* Lytics */,
+				B479392917C90D5D0035FD8B /* Frameworks */,
+				B479392817C90D5D0035FD8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B479392817C90D5D0035FD8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B479392717C90D5D0035FD8B /* Lytics.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B479392917C90D5D0035FD8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B479392A17C90D5D0035FD8B /* UIKit.framework */,
+				B479392C17C90D5D0035FD8B /* Foundation.framework */,
+				B479392E17C90D5D0035FD8B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B479393017C90D5D0035FD8B /* Lytics */ = {
+			isa = PBXGroup;
+			children = (
+				B479393117C90D5D0035FD8B /* Podfile */,
+				B479393F17C90D5D0035FD8B /* AppDelegate.h */,
+				B479394017C90D5D0035FD8B /* AppDelegate.m */,
+				B479393517C90D5D0035FD8B /* Networking */,
+				B479393317C90D5D0035FD8B /* Supporting Files */,
+			);
+			path = Lytics;
+			sourceTree = "<group>";
+		};
+		B479393317C90D5D0035FD8B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B479393417C90D5D0035FD8B /* Lytics-Prefix.pch */,
+				B479393917C90D5D0035FD8B /* Lytics-Info.plist */,
+				B479393A17C90D5D0035FD8B /* InfoPlist.strings */,
+				B479393D17C90D5D0035FD8B /* main.m */,
+				B479394217C90D5D0035FD8B /* Default.png */,
+				B479394417C90D5D0035FD8B /* Default@2x.png */,
+				B479394617C90D5D0035FD8B /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B479393517C90D5D0035FD8B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B479393617C90D5D0035FD8B /* LyticsAPIClient.h */,
+				B479393717C90D5D0035FD8B /* LyticsAPIClient.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B479392617C90D5D0035FD8B /* Lytics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B479394A17C90D5D0035FD8B /* Build configuration list for PBXNativeTarget "Lytics" */;
+			buildPhases = (
+				B479392317C90D5D0035FD8B /* Sources */,
+				B479392417C90D5D0035FD8B /* Frameworks */,
+				B479392517C90D5D0035FD8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lytics;
+			productName = Lytics;
+			productReference = B479392717C90D5D0035FD8B /* Lytics.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B479391F17C90D5D0035FD8B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Jens Andersson";
+			};
+			buildConfigurationList = B479392217C90D5D0035FD8B /* Build configuration list for PBXProject "Lytics" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B479391E17C90D5D0035FD8B;
+			productRefGroup = B479392817C90D5D0035FD8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B479392617C90D5D0035FD8B /* Lytics */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B479392517C90D5D0035FD8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B479393217C90D5D0035FD8B /* Podfile in Resources */,
+				B479393C17C90D5D0035FD8B /* InfoPlist.strings in Resources */,
+				B479394317C90D5D0035FD8B /* Default.png in Resources */,
+				B479394517C90D5D0035FD8B /* Default@2x.png in Resources */,
+				B479394717C90D5D0035FD8B /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B479392317C90D5D0035FD8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B479393817C90D5D0035FD8B /* LyticsAPIClient.m in Sources */,
+				B479393E17C90D5D0035FD8B /* main.m in Sources */,
+				B479394117C90D5D0035FD8B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B479393A17C90D5D0035FD8B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B479393B17C90D5D0035FD8B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B479394817C90D5D0035FD8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B479394917C90D5D0035FD8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B479394B17C90D5D0035FD8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lytics/Lytics-Prefix.pch";
+				INFOPLIST_FILE = "Lytics/Lytics-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B479394C17C90D5D0035FD8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lytics/Lytics-Prefix.pch";
+				INFOPLIST_FILE = "Lytics/Lytics-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B479392217C90D5D0035FD8B /* Build configuration list for PBXProject "Lytics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B479394817C90D5D0035FD8B /* Debug */,
+				B479394917C90D5D0035FD8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B479394A17C90D5D0035FD8B /* Build configuration list for PBXNativeTarget "Lytics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B479394B17C90D5D0035FD8B /* Debug */,
+				B479394C17C90D5D0035FD8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B479391F17C90D5D0035FD8B /* Project object */;
+}
