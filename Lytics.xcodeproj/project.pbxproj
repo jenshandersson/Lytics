@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D4A1FA14BBC45F681DA0C77 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3638F1CB0AC447C69C25B2E9 /* libPods.a */; };
 		B479392B17C90D5D0035FD8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B479392A17C90D5D0035FD8B /* UIKit.framework */; };
 		B479392D17C90D5D0035FD8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B479392C17C90D5D0035FD8B /* Foundation.framework */; };
 		B479392F17C90D5D0035FD8B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B479392E17C90D5D0035FD8B /* CoreGraphics.framework */; };
@@ -18,9 +19,18 @@
 		B479394317C90D5D0035FD8B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B479394217C90D5D0035FD8B /* Default.png */; };
 		B479394517C90D5D0035FD8B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B479394417C90D5D0035FD8B /* Default@2x.png */; };
 		B479394717C90D5D0035FD8B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B479394617C90D5D0035FD8B /* Default-568h@2x.png */; };
+		B479395017C90E040035FD8B /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B479394E17C90E040035FD8B /* DashboardViewController.m */; };
+		B479395117C90E040035FD8B /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B479394F17C90E040035FD8B /* DashboardViewController.xib */; };
+		B479395317C90EDD0035FD8B /* sample_linechart_data.json in Resources */ = {isa = PBXBuildFile; fileRef = B479395217C90EDD0035FD8B /* sample_linechart_data.json */; };
+		B479395717CBE56A0035FD8B /* BarChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B479395617CBE56A0035FD8B /* BarChartCell.m */; };
+		B479395B17CBEA350035FD8B /* GTLServiceAnalytics+Public.m in Sources */ = {isa = PBXBuildFile; fileRef = B479395A17CBEA350035FD8B /* GTLServiceAnalytics+Public.m */; };
+		B479395E17CC02500035FD8B /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B479395D17CC02500035FD8B /* BaseCell.m */; };
+		B479396117CC030B0035FD8B /* MetricCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B479396017CC030B0035FD8B /* MetricCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3638F1CB0AC447C69C25B2E9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		552BAA99299C491DA2DC2E39 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		B479392717C90D5D0035FD8B /* Lytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B479392A17C90D5D0035FD8B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B479392C17C90D5D0035FD8B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +47,18 @@
 		B479394217C90D5D0035FD8B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B479394417C90D5D0035FD8B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B479394617C90D5D0035FD8B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B479394D17C90E040035FD8B /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
+		B479394E17C90E040035FD8B /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
+		B479394F17C90E040035FD8B /* DashboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
+		B479395217C90EDD0035FD8B /* sample_linechart_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample_linechart_data.json; sourceTree = "<group>"; };
+		B479395517CBE56A0035FD8B /* BarChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarChartCell.h; sourceTree = "<group>"; };
+		B479395617CBE56A0035FD8B /* BarChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarChartCell.m; sourceTree = "<group>"; };
+		B479395917CBEA350035FD8B /* GTLServiceAnalytics+Public.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GTLServiceAnalytics+Public.h"; path = "Classes/GTLServiceAnalytics+Public.h"; sourceTree = "<group>"; };
+		B479395A17CBEA350035FD8B /* GTLServiceAnalytics+Public.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "GTLServiceAnalytics+Public.m"; path = "Classes/GTLServiceAnalytics+Public.m"; sourceTree = "<group>"; };
+		B479395C17CC02500035FD8B /* BaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCell.h; sourceTree = "<group>"; };
+		B479395D17CC02500035FD8B /* BaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCell.m; sourceTree = "<group>"; };
+		B479395F17CC030B0035FD8B /* MetricCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetricCell.h; sourceTree = "<group>"; };
+		B479396017CC030B0035FD8B /* MetricCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetricCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +69,7 @@
 				B479392B17C90D5D0035FD8B /* UIKit.framework in Frameworks */,
 				B479392D17C90D5D0035FD8B /* Foundation.framework in Frameworks */,
 				B479392F17C90D5D0035FD8B /* CoreGraphics.framework in Frameworks */,
+				6D4A1FA14BBC45F681DA0C77 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +82,7 @@
 				B479393017C90D5D0035FD8B /* Lytics */,
 				B479392917C90D5D0035FD8B /* Frameworks */,
 				B479392817C90D5D0035FD8B /* Products */,
+				552BAA99299C491DA2DC2E39 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +100,7 @@
 				B479392A17C90D5D0035FD8B /* UIKit.framework */,
 				B479392C17C90D5D0035FD8B /* Foundation.framework */,
 				B479392E17C90D5D0035FD8B /* CoreGraphics.framework */,
+				3638F1CB0AC447C69C25B2E9 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -86,7 +111,12 @@
 				B479393117C90D5D0035FD8B /* Podfile */,
 				B479393F17C90D5D0035FD8B /* AppDelegate.h */,
 				B479394017C90D5D0035FD8B /* AppDelegate.m */,
+				B479394D17C90E040035FD8B /* DashboardViewController.h */,
+				B479394E17C90E040035FD8B /* DashboardViewController.m */,
+				B479394F17C90E040035FD8B /* DashboardViewController.xib */,
+				B479395417CBE5440035FD8B /* Widgets */,
 				B479393517C90D5D0035FD8B /* Networking */,
+				B479395817CBE9A00035FD8B /* Categories */,
 				B479393317C90D5D0035FD8B /* Supporting Files */,
 			);
 			path = Lytics;
@@ -95,6 +125,7 @@
 		B479393317C90D5D0035FD8B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B479395217C90EDD0035FD8B /* sample_linechart_data.json */,
 				B479393417C90D5D0035FD8B /* Lytics-Prefix.pch */,
 				B479393917C90D5D0035FD8B /* Lytics-Info.plist */,
 				B479393A17C90D5D0035FD8B /* InfoPlist.strings */,
@@ -115,6 +146,28 @@
 			name = Networking;
 			sourceTree = "<group>";
 		};
+		B479395417CBE5440035FD8B /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				B479395517CBE56A0035FD8B /* BarChartCell.h */,
+				B479395617CBE56A0035FD8B /* BarChartCell.m */,
+				B479395C17CC02500035FD8B /* BaseCell.h */,
+				B479395D17CC02500035FD8B /* BaseCell.m */,
+				B479395F17CC030B0035FD8B /* MetricCell.h */,
+				B479396017CC030B0035FD8B /* MetricCell.m */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		B479395817CBE9A00035FD8B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B479395917CBEA350035FD8B /* GTLServiceAnalytics+Public.h */,
+				B479395A17CBEA350035FD8B /* GTLServiceAnalytics+Public.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B479394A17C90D5D0035FD8B /* Build configuration list for PBXNativeTarget "Lytics" */;
 			buildPhases = (
+				CFC33D02625B4AE6BBF30BF8 /* Check Pods Manifest.lock */,
 				B479392317C90D5D0035FD8B /* Sources */,
 				B479392417C90D5D0035FD8B /* Frameworks */,
 				B479392517C90D5D0035FD8B /* Resources */,
+				036CE578D7B1453F99A6CA5D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -171,10 +226,45 @@
 				B479394317C90D5D0035FD8B /* Default.png in Resources */,
 				B479394517C90D5D0035FD8B /* Default@2x.png in Resources */,
 				B479394717C90D5D0035FD8B /* Default-568h@2x.png in Resources */,
+				B479395117C90E040035FD8B /* DashboardViewController.xib in Resources */,
+				B479395317C90EDD0035FD8B /* sample_linechart_data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		036CE578D7B1453F99A6CA5D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFC33D02625B4AE6BBF30BF8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B479392317C90D5D0035FD8B /* Sources */ = {
@@ -184,6 +274,11 @@
 				B479393817C90D5D0035FD8B /* LyticsAPIClient.m in Sources */,
 				B479393E17C90D5D0035FD8B /* main.m in Sources */,
 				B479394117C90D5D0035FD8B /* AppDelegate.m in Sources */,
+				B479395017C90E040035FD8B /* DashboardViewController.m in Sources */,
+				B479395717CBE56A0035FD8B /* BarChartCell.m in Sources */,
+				B479395B17CBEA350035FD8B /* GTLServiceAnalytics+Public.m in Sources */,
+				B479395E17CC02500035FD8B /* BaseCell.m in Sources */,
+				B479396117CC030B0035FD8B /* MetricCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +356,7 @@
 		};
 		B479394B17C90D5D0035FD8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 552BAA99299C491DA2DC2E39 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lytics/Lytics-Prefix.pch";
@@ -272,6 +368,7 @@
 		};
 		B479394C17C90D5D0035FD8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 552BAA99299C491DA2DC2E39 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lytics/Lytics-Prefix.pch";
@@ -300,6 +397,7 @@
 				B479394C17C90D5D0035FD8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

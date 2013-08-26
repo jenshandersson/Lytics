@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "DashboardViewController.h"
 #import "AFNetworkActivityIndicatorManager.h"
 
 @implementation AppDelegate
@@ -20,8 +20,9 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     
-    UIViewController *viewController = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    DashboardViewController *dashboard = [DashboardViewController new];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:dashboard];
+    self.navigationController.navigationBarHidden = YES;
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = self.navigationController;
