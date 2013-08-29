@@ -16,6 +16,7 @@
 #import "BaseCell.h"
 #import "MetricCell.h"
 #import <HexColors/HexColor.h>
+#import <UIColor+MLPFlatColors.h>
 
 static NSString *const kKeychainItemName = @"OAuth2 Sample: Google+";
 
@@ -46,14 +47,15 @@ NSString *scope = @"https://www.googleapis.com/auth/plus.me https://www.googleap
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    
     _auth = [GTMOAuth2ViewControllerTouch authForGoogleFromKeychainForName:kKeychainItemName clientID:kMyClientID clientSecret:kMyClientSecret];
     if (![_auth canAuthorize]) {
         [self signIn];
     } else {
         [self setupCells];
     }
-    
+    self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1, 20)];
+    self.tableView.rowHeight = 100;
+    self.tableView.backgroundColor = [UIColor flatWhiteColor];
     [self.tableView addPullToRefreshWithActionHandler:^{
         [self.widgets makeObjectsPerformSelector:@selector(refreshData)];
     } withBackgroundColor:[UIColor clearColor]];
@@ -76,12 +78,12 @@ NSString *scope = @"https://www.googleapis.com/auth/plus.me https://www.googleap
     NSDateComponents *dc = [NSDateComponents new];
     dc.month = -3;
     
-    NSString *profileId = @"ga:68216181";
-    profileId = @"ga:64735439";
+    NSString *profileIdMobile = @"ga:68216181";
+    NSString *profileId = @"ga:64735439";
     
     GTLQueryAnalytics *q = [GTLQueryAnalytics queryForDataRealtimeGetWithIds:profileId metrics:@"ga:activeVisitors"];
-    MetricCell *realTimeCell = [[MetricCell alloc] initWithQuery:q andHeight:100];
-    realTimeCell.title = @"Real-Time Visitors";
+    MetricCell *realTimeCell = [[MetricCell alloc] initWithQuery:q andHeight:80];
+    realTimeCell.title = @"Service Real-Time";
     realTimeCell.color = [UIColor colorWithHexString:@"44BBFF"];
     
     
@@ -95,15 +97,28 @@ NSString *scope = @"https://www.googleapis.com/auth/plus.me https://www.googleap
     
     
     q = [GTLQueryAnalytics queryForDataGaGetWithIds:profileId startDate:nil endDate:nil metrics:@"ga:visits"];
-    q.dimensions = @"ga:day";
+    q.dimensions = @"ga:month,ga:day";
     BarChartCell *cell2 = [[BarChartCell alloc] initWithQuery:q andHeight:100];
+    dc.month = -1;
     cell2.dateComponents = dc;
     cell2.title = @"Visits Last Month";
     cell2.color = [UIColor colorWithHexString:@"FC575E"];
     
+    q = [GTLQueryAnalytics queryForDataRealtimeGetWithIds:profileIdMobile metrics:@"ga:activeVisitors"];
+    MetricCell *realTimeCell2 = [[MetricCell alloc] initWithQuery:q andHeight:80];
+    realTimeCell2.title = @"iOS Real-Time";
+    realTimeCell2.color = [UIColor flatDarkBlueColor];
     
     
-    self.widgets = @[realTimeCell, cell, cell2];
+    q = [GTLQueryAnalytics queryForDataGaGetWithIds:profileIdMobile startDate:nil endDate:nil metrics:@"ga:totalEvents"];
+    q.dimensions = @"ga:month,ga:day";
+    q.filters = @"ga:eventAction==User created a new conversation";
+    BarChartCell *filtered = [[BarChartCell alloc] initWithQuery:q andHeight:100];
+    filtered.dateComponents = dc;
+    filtered.title = @"# Created Posts";
+    filtered.color = [UIColor colorWithHexString:@"FF7416"];
+    
+    self.widgets = @[realTimeCell, cell, cell2, realTimeCell2, filtered]    ;
     [self.tableView reloadData];
 
 }

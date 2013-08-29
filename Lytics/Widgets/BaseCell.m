@@ -18,17 +18,20 @@
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     if (self) {
         // Initialization code
-        self.height = height;
+        CGFloat xPadding = IS_IPAD()?50:10;
+        CGFloat labelHeight = IS_IPAD() ? 34 : 30;
+        self.height = IS_IPAD() ? 2 * height : height;
         self.query = query;
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        CGRect frame = CGRectInset(self.contentView.bounds, 50, 0);
-        frame.origin.y = 40;
+        CGRect frame = CGRectInset(self.contentView.bounds, xPadding, 0);
+        frame.origin.y = labelHeight + 10;
         frame.size.height -= frame.origin.y;
         self.graphView = [[UIView alloc] initWithFrame:frame];
         self.graphView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         
-        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 0, 320, 30)];
-        self.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:20];
+        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(xPadding, 0, 320, labelHeight)];
+        self.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:IS_IPAD()?24 : 16];
+        self.titleLabel.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:self.titleLabel];
         
         [self.contentView addSubview:self.graphView];

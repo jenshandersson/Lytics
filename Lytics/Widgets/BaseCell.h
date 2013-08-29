@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Jens Andersson. All rights reserved.
 //
 
+#define IS_IPAD() (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
 #import <UIKit/UIKit.h>
 #import <GTLQueryAnalytics.h>
 #import <GTLAnalyticsGaData.h>
@@ -14,7 +16,7 @@
 
 @property (nonatomic, copy) GTLQueryAnalytics *query;
 @property (nonatomic) GTLAnalyticsGaData *data;
-@property (nonatomic) NSDateComponents *dateComponents;
+@property (nonatomic, copy) NSDateComponents *dateComponents;
 @property (nonatomic) NSInteger height;
 @property (nonatomic) NSString *title;
 @property (nonatomic) UIColor *color;

@@ -13,7 +13,7 @@
 @implementation BarChartCell
 
 - (id)initWithQuery:(GTLQueryAnalytics *)query andHeight:(NSInteger)height {
-    self = [super initWithQuery:query andHeight:2*height];
+    self = [super initWithQuery:query andHeight:height];
     
     return self;
 }

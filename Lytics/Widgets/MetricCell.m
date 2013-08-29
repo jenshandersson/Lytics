@@ -17,20 +17,29 @@
     if (self) {
         self.metricLabel = [[UICountingLabel alloc] initWithFrame:self.contentView.bounds];
         self.metricLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        self.metricLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:60];
+        self.metricLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:IS_IPAD()?60:50];
         self.metricLabel.textAlignment = NSTextAlignmentCenter;
         self.metricLabel.backgroundColor = [UIColor clearColor];
         self.metricLabel.format = @"%d";
         [self.contentView addSubview:self.metricLabel];
         
-        CGRect titleFrame = self.graphView.frame;
-        titleFrame.origin.y = 0;
-        titleFrame.size.height = self.contentView.frame.size.height;
-        self.titleLabel.frame = titleFrame;
-        self.titleLabel.backgroundColor = [UIColor clearColor];
-        self.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:32];
-        self.titleLabel.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-        [self.contentView addSubview:self.titleLabel];
+        
+        if (IS_IPAD()) {
+            self.height -= 20;
+            CGRect titleFrame = self.graphView.frame;
+            titleFrame.origin.y = 0;
+            titleFrame.size.height = self.contentView.frame.size.height;
+            titleFrame.size.width = titleFrame.size.width * 0.45;
+            self.titleLabel.frame = titleFrame;
+            self.titleLabel.minimumScaleFactor = 0.5;
+            self.titleLabel.numberOfLines = 1;
+            self.titleLabel.adjustsFontSizeToFitWidth = YES;
+            self.titleLabel.backgroundColor = [UIColor clearColor];
+            self.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:40];
+            
+            self.titleLabel.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleRightMargin;
+            [self.contentView addSubview:self.titleLabel];
+        }
     }
     
     return self;
