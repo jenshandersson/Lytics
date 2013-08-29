@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6D4A1FA14BBC45F681DA0C77 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3638F1CB0AC447C69C25B2E9 /* libPods.a */; };
+		B4416F2F17CF764400BC1EC9 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4416F2E17CF764400BC1EC9 /* UICountingLabel.m */; };
 		B479392B17C90D5D0035FD8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B479392A17C90D5D0035FD8B /* UIKit.framework */; };
 		B479392D17C90D5D0035FD8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B479392C17C90D5D0035FD8B /* Foundation.framework */; };
 		B479392F17C90D5D0035FD8B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B479392E17C90D5D0035FD8B /* CoreGraphics.framework */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		3638F1CB0AC447C69C25B2E9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		552BAA99299C491DA2DC2E39 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		B4416F2D17CF764400BC1EC9 /* UICountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
+		B4416F2E17CF764400BC1EC9 /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
 		B479392717C90D5D0035FD8B /* Lytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B479392A17C90D5D0035FD8B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B479392C17C90D5D0035FD8B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -125,6 +128,8 @@
 		B479393317C90D5D0035FD8B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B4416F2D17CF764400BC1EC9 /* UICountingLabel.h */,
+				B4416F2E17CF764400BC1EC9 /* UICountingLabel.m */,
 				B479395217C90EDD0035FD8B /* sample_linechart_data.json */,
 				B479393417C90D5D0035FD8B /* Lytics-Prefix.pch */,
 				B479393917C90D5D0035FD8B /* Lytics-Info.plist */,
@@ -279,6 +284,7 @@
 				B479395B17CBEA350035FD8B /* GTLServiceAnalytics+Public.m in Sources */,
 				B479395E17CC02500035FD8B /* BaseCell.m in Sources */,
 				B479396117CC030B0035FD8B /* MetricCell.m in Sources */,
+				B4416F2F17CF764400BC1EC9 /* UICountingLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

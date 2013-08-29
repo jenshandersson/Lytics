@@ -21,15 +21,58 @@
         self.height = height;
         self.query = query;
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
+        CGRect frame = CGRectInset(self.contentView.bounds, 50, 0);
+        frame.origin.y = 40;
+        frame.size.height -= frame.origin.y;
+        self.graphView = [[UIView alloc] initWithFrame:frame];
+        self.graphView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        
+        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 0, 320, 30)];
+        self.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:20];
         [self.contentView addSubview:self.titleLabel];
+        
+        [self.contentView addSubview:self.graphView];
     }
     return self;
 }
 
+- (NSDateComponents *)dateComponents {
+    /** Fall back to last month if nothing set */
+    if (!_dateComponents) {
+        _dateComponents = [NSDateComponents new];
+        _dateComponents.month = -1;
+    }
+    return _dateComponents;
+}
+
+- (NSString *)startDate {
+    NSString *_startDate;
+    NSDate *date = [NSDate new];
+    date = [[NSCalendar currentCalendar] dateByAddingComponents:self.dateComponents toDate:date options:0];
+    _startDate = [self stringFromDate:date];
+    
+    return _startDate;
+}
+
+- (NSString *)endDate {
+    NSString *_endDate;
+    
+    NSDate *date = [NSDate new];
+    _endDate = [self stringFromDate:date];
+    
+    return _endDate;
+}
+
+- (NSString *)stringFromDate:(NSDate *)date {
+    NSDateFormatter *df = [NSDateFormatter new];
+    df.dateFormat = @"YYYY-MM-dd";
+    return [df stringFromDate:date];
+}
+
 - (void)executeQuery {
     if (self.data) return [self plot];
-    
+    self.query.startDate = [self startDate];
+    self.query.endDate = [self endDate];
     [[GTLServiceAnalytics shared] executeQuery:self.query completionHandler:^(GTLServiceTicket *ticket, id object, NSError *error) {
         self.data = object;
         [self plot];

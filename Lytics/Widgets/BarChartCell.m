@@ -12,6 +12,12 @@
 
 @implementation BarChartCell
 
+- (id)initWithQuery:(GTLQueryAnalytics *)query andHeight:(NSInteger)height {
+    self = [super initWithQuery:query andHeight:2*height];
+    
+    return self;
+}
+
 - (void)plot {
     [super plot];
     
@@ -24,30 +30,32 @@
         maxValue = MAX(maxValue, value);
     }
     
-    for (UIView *v in self.contentView.subviews) {
+    for (UIView *v in self.graphView.subviews) {
         if (v != self.titleLabel) [v removeFromSuperview];
     }
     
-    CGFloat maxHeight = self.height - 10;
+    CGFloat graphHeight = self.graphView.bounds.size.height;
     CGFloat margin = 1;    
-    CGFloat unitHeight = 1.0f * maxHeight / maxValue;
-    CGFloat unitWidth = self.contentView.frame.size.width / length - margin;
-
+    CGFloat unitHeight = 1.0f * graphHeight / maxValue;
+    CGFloat unitWidth = self.graphView.frame.size.width / length - margin;
+    
     
     CGFloat x = 0;
+    uint i = 0;
     for (NSArray *values in self.data.rows) {
         NSString *stringValue = [values lastObject];
         NSInteger value = [stringValue integerValue];
         
         CGFloat barHeight = unitHeight * value;
-        UIView *v = [[UIView alloc] initWithFrame:CGRectMake(x, self.height, unitWidth, 0)];
+        UIView *v = [[UIView alloc] initWithFrame:CGRectMake(x, graphHeight, unitWidth, 0)];
         v.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
         v.backgroundColor = self.color;
-        [self.contentView addSubview:v];
-        [UIView animateWithDuration:0.4 animations:^{
-            v.frame = CGRectMake(x, self.height-barHeight, unitWidth, barHeight);
-        }];
+        [self.graphView addSubview:v];
+        [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            v.frame = CGRectMake(x, graphHeight-barHeight, unitWidth, barHeight);
+        } completion:nil];
         
+        i++;
         x += unitWidth + margin;
     }
 }

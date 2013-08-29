@@ -8,8 +8,10 @@
 
 #import "BaseCell.h"
 
+@class UICountingLabel;
+
 @interface MetricCell : BaseCell
 
-@property (nonatomic) UILabel *metricLabel;
+@property (nonatomic) UICountingLabel *metricLabel;
 
 @end

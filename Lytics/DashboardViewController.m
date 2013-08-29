@@ -73,28 +73,32 @@ NSString *scope = @"https://www.googleapis.com/auth/plus.me https://www.googleap
 - (void)setupCells {
     [GTLServiceAnalytics shared].authorizer = _auth;
     
-    NSString *startDate = @"2013-08-01";
-    NSString *endDate = @"2013-08-25";
+    NSDateComponents *dc = [NSDateComponents new];
+    dc.month = -3;
     
-    GTLQueryAnalytics *q = [GTLQueryAnalytics queryForDataRealtimeGetWithIds:@"ga:68216181" metrics:@"ga:activeVisitors"];
+    NSString *profileId = @"ga:68216181";
+    profileId = @"ga:64735439";
+    
+    GTLQueryAnalytics *q = [GTLQueryAnalytics queryForDataRealtimeGetWithIds:profileId metrics:@"ga:activeVisitors"];
     MetricCell *realTimeCell = [[MetricCell alloc] initWithQuery:q andHeight:100];
     realTimeCell.title = @"Real-Time Visitors";
     realTimeCell.color = [UIColor colorWithHexString:@"44BBFF"];
     
     
     
-    q = [GTLQueryAnalytics queryForDataGaGetWithIds:@"ga:64735439" startDate:startDate endDate:endDate metrics:@"ga:visitors"];
-    q.dimensions = @"ga:day";
+    q = [GTLQueryAnalytics queryForDataGaGetWithIds:profileId startDate:nil endDate:nil metrics:@"ga:visitors"];
+    q.dimensions = @"ga:month,ga:day";
     BarChartCell *cell = [[BarChartCell alloc] initWithQuery:q andHeight:100];
-    cell.title = @"Visitors";
+    cell.title = @"Visitors Last Year";
     cell.color = [UIColor colorWithHexString:@"66CC99"];
+    cell.dateComponents = dc;
     
     
-    
-    q = [GTLQueryAnalytics queryForDataGaGetWithIds:@"ga:64735439" startDate:startDate endDate:endDate metrics:@"ga:visits"];
+    q = [GTLQueryAnalytics queryForDataGaGetWithIds:profileId startDate:nil endDate:nil metrics:@"ga:visits"];
     q.dimensions = @"ga:day";
     BarChartCell *cell2 = [[BarChartCell alloc] initWithQuery:q andHeight:100];
-    cell2.title = @"Visits";
+    cell2.dateComponents = dc;
+    cell2.title = @"Visits Last Month";
     cell2.color = [UIColor colorWithHexString:@"FC575E"];
     
     
@@ -177,6 +181,7 @@ NSString *scope = @"https://www.googleapis.com/auth/plus.me https://www.googleap
         // Authentication failed
     } else {
         // Authentication succeeded
+        _auth = auth;
         [self dismissViewControllerAnimated:NO completion:nil];
         [self setupCells];
     }

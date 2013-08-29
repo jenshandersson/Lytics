@@ -14,10 +14,11 @@
 
 @property (nonatomic, copy) GTLQueryAnalytics *query;
 @property (nonatomic) GTLAnalyticsGaData *data;
+@property (nonatomic) NSDateComponents *dateComponents;
 @property (nonatomic) NSInteger height;
 @property (nonatomic) NSString *title;
 @property (nonatomic) UIColor *color;
-
+@property (nonatomic) UIView *graphView;
 @property (nonatomic) UILabel *titleLabel;
 
 
