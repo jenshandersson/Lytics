@@ -55,7 +55,7 @@ NSString *scope = @"https://www.googleapis.com/auth/plus.me https://www.googleap
     }
     self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1, 20)];
     self.tableView.rowHeight = 100;
-    self.tableView.backgroundColor = [UIColor flatWhiteColor];
+    self.tableView.backgroundColor = [UIColor colorWithHexString:@"F0F1F5"];
     [self.tableView addPullToRefreshWithActionHandler:^{
         [self.widgets makeObjectsPerformSelector:@selector(refreshData)];
     } withBackgroundColor:[UIColor clearColor]];
@@ -107,7 +107,7 @@ NSString *scope = @"https://www.googleapis.com/auth/plus.me https://www.googleap
     q = [GTLQueryAnalytics queryForDataRealtimeGetWithIds:profileIdMobile metrics:@"ga:activeVisitors"];
     MetricCell *realTimeCell2 = [[MetricCell alloc] initWithQuery:q andHeight:80];
     realTimeCell2.title = @"iOS Real-Time";
-    realTimeCell2.color = [UIColor flatDarkBlueColor];
+    realTimeCell2.color = [UIColor colorWithHexString:@"115566"];
     
     
     q = [GTLQueryAnalytics queryForDataGaGetWithIds:profileIdMobile startDate:nil endDate:nil metrics:@"ga:totalEvents"];
@@ -116,7 +116,7 @@ NSString *scope = @"https://www.googleapis.com/auth/plus.me https://www.googleap
     BarChartCell *filtered = [[BarChartCell alloc] initWithQuery:q andHeight:100];
     filtered.dateComponents = dc;
     filtered.title = @"# Created Posts";
-    filtered.color = [UIColor colorWithHexString:@"FF7416"];
+    filtered.color = [UIColor colorWithHexString:@"FF9E09"];
     
     self.widgets = @[realTimeCell, cell, cell2, realTimeCell2, filtered]    ;
     [self.tableView reloadData];
@@ -138,45 +138,6 @@ NSString *scope = @"https://www.googleapis.com/auth/plus.me https://www.googleap
     return cell;
 }
 
-/*
-- (void)callAPI {
-    [self visitors];
-    return;
-    
-    GTLQuery *query = [GTLQueryAnalytics queryForManagementAccountsList];
-    [self.service executeQuery:query completionHandler:^(GTLServiceTicket *ticket, id object, NSError *error) {
-        [self profilesForAccount:@"310453"];
-    }];
-}
-
-- (void)profilesForAccount:(NSString *)accountId {
-    GTLQuery *query = [GTLQueryAnalytics queryForManagementWebpropertiesListWithAccountId:accountId];
-    [self.service executeQuery:query completionHandler:^(GTLServiceTicket *ticket, id object, NSError *error) {
-        ;
-    }];
-}
-
-
-- (void)visitors {
-    //68216181 app
-    //64735439 service
-    GTLQueryAnalytics *query = [GTLQueryAnalytics queryForDataRealtimeGetWithIds:@"ga:68216181" metrics:@"ga:activeVisitors"];
-    [self.service executeQuery:query completionHandler:^(GTLServiceTicket *ticket, id object, NSError *error) {
-        NSString *visitors = [[[object rows] lastObject] lastObject];
-        self.activeUsersLabel.text = visitors;
-    }];
-    [self visitorsChart];
-}
-
-- (void)visitorsChart {
-    GTLQueryAnalytics *query = [GTLQueryAnalytics queryForDataGaGetWithIds:@"ga:64735439" startDate:@"2013-08-01" endDate:@"2013-08-24" metrics:@"ga:visitors"];
-    query.dimensions = @"ga:day";
-    [self.service executeQuery:query completionHandler:^(GTLServiceTicket *ticket, id object, NSError *error) {
-        
-    }];
-}
-
- */
 - (void)signIn {
     GTMOAuth2ViewControllerTouch *viewController;
     viewController = [[GTMOAuth2ViewControllerTouch alloc] initWithScope:scope

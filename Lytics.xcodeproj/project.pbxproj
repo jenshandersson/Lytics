@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6D4A1FA14BBC45F681DA0C77 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3638F1CB0AC447C69C25B2E9 /* libPods.a */; };
+		B432A74E17CF970600A50421 /* GraphAxisView.m in Sources */ = {isa = PBXBuildFile; fileRef = B432A74D17CF970600A50421 /* GraphAxisView.m */; };
 		B4416F2F17CF764400BC1EC9 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4416F2E17CF764400BC1EC9 /* UICountingLabel.m */; };
 		B479392B17C90D5D0035FD8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B479392A17C90D5D0035FD8B /* UIKit.framework */; };
 		B479392D17C90D5D0035FD8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B479392C17C90D5D0035FD8B /* Foundation.framework */; };
@@ -32,6 +33,8 @@
 /* Begin PBXFileReference section */
 		3638F1CB0AC447C69C25B2E9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		552BAA99299C491DA2DC2E39 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		B432A74C17CF970600A50421 /* GraphAxisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphAxisView.h; sourceTree = "<group>"; };
+		B432A74D17CF970600A50421 /* GraphAxisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphAxisView.m; sourceTree = "<group>"; };
 		B4416F2D17CF764400BC1EC9 /* UICountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
 		B4416F2E17CF764400BC1EC9 /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
 		B479392717C90D5D0035FD8B /* Lytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +163,8 @@
 				B479395D17CC02500035FD8B /* BaseCell.m */,
 				B479395F17CC030B0035FD8B /* MetricCell.h */,
 				B479396017CC030B0035FD8B /* MetricCell.m */,
+				B432A74C17CF970600A50421 /* GraphAxisView.h */,
+				B432A74D17CF970600A50421 /* GraphAxisView.m */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 				B479395017C90E040035FD8B /* DashboardViewController.m in Sources */,
 				B479395717CBE56A0035FD8B /* BarChartCell.m in Sources */,
 				B479395B17CBEA350035FD8B /* GTLServiceAnalytics+Public.m in Sources */,
+				B432A74E17CF970600A50421 /* GraphAxisView.m in Sources */,
 				B479395E17CC02500035FD8B /* BaseCell.m in Sources */,
 				B479396117CC030B0035FD8B /* MetricCell.m in Sources */,
 				B4416F2F17CF764400BC1EC9 /* UICountingLabel.m in Sources */,

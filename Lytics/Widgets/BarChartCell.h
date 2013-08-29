@@ -10,7 +10,10 @@
 #import <GTLQueryAnalytics.h>
 #import <GTLAnalyticsGaData.h>
 #import "BaseCell.h"
+#import "GraphAxisView.h"
 
 @interface BarChartCell : BaseCell
+
+@property (nonatomic) GraphAxisView *axis;
 
 @end

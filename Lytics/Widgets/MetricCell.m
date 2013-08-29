@@ -17,7 +17,7 @@
     if (self) {
         self.metricLabel = [[UICountingLabel alloc] initWithFrame:self.contentView.bounds];
         self.metricLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        self.metricLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:IS_IPAD()?60:50];
+        self.metricLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:IS_IPAD()?60:40];
         self.metricLabel.textAlignment = NSTextAlignmentCenter;
         self.metricLabel.backgroundColor = [UIColor clearColor];
         self.metricLabel.format = @"%d";

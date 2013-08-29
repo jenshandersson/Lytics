@@ -27,6 +27,7 @@
         frame.origin.y = labelHeight + 10;
         frame.size.height -= frame.origin.y;
         self.graphView = [[UIView alloc] initWithFrame:frame];
+        
         self.graphView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         
         self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(xPadding, 0, 320, labelHeight)];
@@ -35,6 +36,7 @@
         [self.contentView addSubview:self.titleLabel];
         
         [self.contentView addSubview:self.graphView];
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
